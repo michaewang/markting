@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/transparent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/dialog" >
+
+        <LinearLayout
+            android:id="@+id/layout_night_mode"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/item_height"
+            android:layout_marginTop="@dimen/item_margin_large"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/item_margin"
+                android:src="@drawable/night_mode_seekbar_min_icon" />
+
+            <SeekBar
+                android:id="@+id/seekBar_light"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="255"
+                android:thumbOffset="0px"
+                android:progressDrawable="@drawable/seekbar_light"
+                android:thumb="@drawable/night_mode_seekbar_thumb" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/item_margin"
+                android:src="@drawable/night_mode_seekbar_max_icon" />
+        </LinearLayout>
+        
+        <TextView 
+            android:id="@+id/tv_disc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_night_mode"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="@dimen/item_margin_large"
+            android:textColor="@color/dark"
+            android:textSize="@dimen/small_medium_text_size"
+            android:layout_centerHorizontal="true"
+            android:text="注：也可在“我的>更多>设置”中调节" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/tv_disc"
+            android:layout_marginLeft="@dimen/item_margin_large"
+            android:layout_marginRight="@dimen/item_margin_large"
+            android:layout_marginTop="@dimen/item_margin_top"
+            android:background="#d7d7d7" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="18dp"
+            android:layout_marginRight="@dimen/item_margin_large"
+            android:background="@drawable/btn_ok"
+            android:text="确定"
+            android:textSize="@dimen/medium_text_size"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_default"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignBaseline="@+id/btn_ok"
+            android:layout_alignBottom="@+id/btn_ok"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/item_margin_large"
+            android:background="@drawable/btn_cancel"
+            android:textSize="@dimen/medium_text_size"
+            android:text="使用系统亮度" />
+    </RelativeLayout>
+
+</RelativeLayout>

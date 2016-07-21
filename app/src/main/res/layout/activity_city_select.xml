@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/android_layout_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/TopbarStyle" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:paddingLeft="64dp"
+            android:paddingRight="64dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="6dp"
+            android:src="@drawable/flight_title_back_normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="选择地址"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="@dimen/medium_text_size" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height_middle"
+        android:background="@drawable/bg_item_top"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/rb_province"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="true"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:singleLine="true"
+            android:textSize="@dimen/small_text_size"
+            android:text="省" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/hintColor" />
+
+        <TextView
+            android:id="@+id/rb_city"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:singleLine="true"
+            android:textSize="@dimen/small_text_size"
+            android:text="市" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/hintColor" />
+
+        <TextView
+            android:id="@+id/rb_district"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:singleLine="true"
+            android:textSize="@dimen/small_text_size"
+            android:text="区/县" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/tab_bg_shadow" >
+        
+        <View
+            android:id="@+id/indicator"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/red" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_city"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/lightBg"
+        android:cacheColorHint="@drawable/transparent"
+        android:fadingEdge="none"
+        android:listSelector="@drawable/transparent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height_middle"
+        android:background="@drawable/hintColor" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="@dimen/item_margin_large"
+        android:background="@drawable/btn_ok"
+        android:text="完成"
+        android:textColor="@color/white" />
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/actionbarsherlock/actionbarsherlock.iml" filepath="$PROJECT_DIR$/actionbarsherlock/actionbarsherlock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib_PullToRefresh_JD_0213/lib_PullToRefresh_JD_0213.iml" filepath="$PROJECT_DIR$/lib_PullToRefresh_JD_0213/lib_PullToRefresh_JD_0213.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib_QRCode3/lib_QRCode3.iml" filepath="$PROJECT_DIR$/lib_QRCode3/lib_QRCode3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib_baidumap_location_for_jd/lib_baidumap_location_for_jd.iml" filepath="$PROJECT_DIR$/lib_baidumap_location_for_jd/lib_baidumap_location_for_jd.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib_menudrawer/lib_menudrawer.iml" filepath="$PROJECT_DIR$/lib_menudrawer/lib_menudrawer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib_slidingmenu/lib_slidingmenu.iml" filepath="$PROJECT_DIR$/lib_slidingmenu/lib_slidingmenu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib_staggeredgrid/lib_staggeredgrid.iml" filepath="$PROJECT_DIR$/lib_staggeredgrid/lib_staggeredgrid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib_yuchen0309_for_jd/lib_yuchen0309_for_jd.iml" filepath="$PROJECT_DIR$/lib_yuchen0309_for_jd/lib_yuchen0309_for_jd.iml" />
+      <module fileurl="file://$PROJECT_DIR$/markting.iml" filepath="$PROJECT_DIR$/markting.iml" />
+    </modules>
+  </component>
+</project>

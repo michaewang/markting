@@ -1,0 +1,141 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    tools:context=".BoxActivity" >
+
+    <RelativeLayout
+        android:id="@+id/layout_category_topbar"
+        style="@style/TopbarStyle" >
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="6dp"
+            android:src="@drawable/flight_title_back_normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="消息中心"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="@dimen/medium_text_size" />
+
+        <ImageView
+            android:id="@+id/img_msg_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="6dp"
+            android:src="@drawable/message_setting_normal" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_category_topbar"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/layout_dongdong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/ImageView01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/item_margin"
+                android:layout_marginLeft="@dimen/item_margin_left"
+                android:layout_marginTop="@dimen/item_margin"
+                android:src="@drawable/my_message_box_dongdong" />
+
+            <TextView
+                android:id="@+id/TextView02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/ImageView01"
+                android:layout_marginLeft="@dimen/item_margin_top"
+                android:layout_toRightOf="@+id/ImageView01"
+                android:textSize="@dimen/small_middle_text_size"
+                android:textColor="@color/black"
+                android:text="京东咚咚" />
+
+            <TextView
+                android:id="@+id/TextView01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/TextView02"
+                android:layout_below="@+id/TextView02"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/darkgray"
+                android:text="点击查看您与客服的会话记录" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_coupon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/item_margin"
+                android:layout_marginLeft="@dimen/item_margin_left"
+                android:layout_marginTop="@dimen/item_margin"
+                android:src="@drawable/my_message_box_coupon" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/imageView2"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/imageView2"
+                android:textSize="@dimen/small_middle_text_size"
+                android:textColor="@color/black"
+                android:text="优惠促销" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView3"
+                android:layout_below="@+id/textView3"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="@dimen/item_margin_right"
+                android:singleLine="true"
+                android:textColor="@color/darkgray"
+                android:text="上京东，乐享麦当劳！网银+支付购套餐享受更多优惠" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView3"
+                android:layout_alignBottom="@+id/textView3"
+                android:layout_alignRight="@+id/textView2"
+                android:textSize="@dimen/small_text_size"
+                android:textColor="@color/darkgray"
+                android:text="3月18日 11:29" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

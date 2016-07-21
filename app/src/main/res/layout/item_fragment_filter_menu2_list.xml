@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_catalog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_catalog"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:background="@drawable/android_layout_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="O"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height_middle"
+            android:layout_below="@+id/tv_catalog"
+            android:background="@drawable/hintColor" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height" >
+
+        <TextView
+            android:id="@+id/tv_items"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:textSize="@dimen/small_medium_text_size"
+            android:text="欧莱雅" />
+
+        <ImageView
+            android:id="@+id/img_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50dp"
+            android:src="@drawable/pd_right_icon"
+            android:visibility="invisible" />
+        
+
+    </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height_middle"
+            android:background="@drawable/hintColor" />
+
+</LinearLayout>

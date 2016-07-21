@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="9dp" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="54dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_stop"
+            style="@style/commonBtn"
+            android:layout_width="fill_parent"
+            
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="取消" />
+
+        <Button
+            android:id="@+id/btn_start"
+            style="@style/commonBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="下载" />
+
+        <Button
+            android:id="@+id/btn_pause"
+            style="@style/commonBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="暂停" />
+
+        <Button
+            android:id="@+id/btn_continue"
+            style="@style/commonBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="继续" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/progress_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/img_icon"
+        android:layout_toRightOf="@+id/img_icon"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="6dp"
+        android:textColor="@color/text"
+        android:text="150MB" />
+
+    <ImageView
+        android:id="@+id/img_icon"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/load_logo" />
+
+    <TextView
+        android:id="@+id/tv_appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/img_icon"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="4dp"
+        android:text="微信"
+        android:textSize="16sp" />
+
+</RelativeLayout>

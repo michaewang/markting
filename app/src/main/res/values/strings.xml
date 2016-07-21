@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MyShop</string>
+    <string name="action_settings">设置</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_goods_list">GoodsListActivity</string>
+    <string name="title_activity_detail">DetailActivity</string>
+
+    <!-- 个人中心 -->
+    <string name="personal_title">我的京东</string>
+    <string name="personal_more">更多</string>
+    <string name="personal_welcome">欢迎来到京东</string>
+    <string name="personal_login">登录/注册</string>
+    <string name="personal_fast_search">订单状态速查</string>
+    <string name="personal_wait_pay">待付款订单</string>
+    <string name="personal_all_order">全部订单</string>
+    <string name="personal_my_focus">我的关注</string>
+    <string name="personal_comment">商品评价/晒单</string>
+    <string name="personal_information">消息中心</string>
+    <string name="personal_quick_buy">轻松购</string>
+    <string name="personal_account">账户安全</string>
+    <string name="personal_return_back">返修/退换货</string>
+    <string name="personal_order_center">订单中心</string>
+    <string name="personal_account_center">账户中心</string>
+    <string name="personal_customer_service">客户服务</string>
+    <string name="personal_infomation_service">预约电话服务</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_search">SearchActivity</string>
+
+    <!-- 微博登录相关 -->
+    <string name="weibosdk_demo_toast_auth_canceled">取消授权</string>
+    <string name="weibosdk_demo_toast_obtain_code_success">获取 Code 成功</string>
+    <string name="weibosdk_demo_toast_obtain_code_failed">获取 Code 失败</string>
+    <string name="weibosdk_demo_toast_obtain_token_success">获取 Token 成功</string>
+    <string name="weibosdk_demo_toast_obtain_token_failed">获取 Token 失败</string>
+    <string name="weibosdk_demo_token_to_string_format_1">Token：%1$s \n有效期：%2$s</string>
+    <string name="weibosdk_demo_toast_auth_success">授权成功</string>
+    <string name="weibosdk_demo_toast_auth_failed">授权失败</string>
+    <string name="weibosdk_demo_token_has_existed">Token 仍在有效期内，无需再次登录。</string>
+
+    <!-- 空格 -->
+    <string name="space">&#160;</string>
+    <string name="title_activity_more">MoreActivity</string>
+    <string name="title_activity_box">BoxActivity</string>
+
+</resources>

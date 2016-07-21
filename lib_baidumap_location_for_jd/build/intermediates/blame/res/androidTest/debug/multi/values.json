@@ -1,0 +1,163 @@
+[
+    {
+        "outputFile": "/home/local/SPREADTRUM/michael.wang/MyAndroid/markting/lib_baidumap_location_for_jd/build/intermediates/res/merged/androidTest/debug/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 57,
+                    "endOffset": 108
+                },
+                "from": {
+                    "file": "/home/local/SPREADTRUM/michael.wang/MyAndroid/markting/lib_baidumap_location_for_jd/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 57,
+                        "endOffset": 108
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 113,
+                    "endColumn": 55,
+                    "endOffset": 164
+                },
+                "from": {
+                    "file": "/home/local/SPREADTRUM/michael.wang/MyAndroid/markting/lib_baidumap_location_for_jd/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 113,
+                        "endColumn": 55,
+                        "endOffset": 164
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 169,
+                    "endColumn": 52,
+                    "endOffset": 217
+                },
+                "from": {
+                    "file": "/home/local/SPREADTRUM/michael.wang/MyAndroid/markting/lib_baidumap_location_for_jd/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 169,
+                        "endColumn": 52,
+                        "endOffset": 217
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 222,
+                    "endColumn": 48,
+                    "endOffset": 266
+                },
+                "from": {
+                    "file": "/home/local/SPREADTRUM/michael.wang/MyAndroid/markting/lib_baidumap_location_for_jd/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 222,
+                        "endColumn": 48,
+                        "endOffset": 266
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 271,
+                    "endColumn": 69,
+                    "endOffset": 336
+                },
+                "from": {
+                    "file": "/home/local/SPREADTRUM/michael.wang/MyAndroid/markting/lib_baidumap_location_for_jd/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 271,
+                        "endColumn": 69,
+                        "endOffset": 336
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 341,
+                    "endColumn": 52,
+                    "endOffset": 389
+                },
+                "from": {
+                    "file": "/home/local/SPREADTRUM/michael.wang/MyAndroid/markting/lib_baidumap_location_for_jd/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 341,
+                        "endColumn": 52,
+                        "endOffset": 389
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 394,
+                    "endLine": 14,
+                    "endColumn": 12,
+                    "endOffset": 680
+                },
+                "from": {
+                    "file": "/home/local/SPREADTRUM/michael.wang/MyAndroid/markting/lib_baidumap_location_for_jd/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 394,
+                        "endLine": 14,
+                        "endColumn": 12,
+                        "endOffset": 680
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 685,
+                    "endLine": 17,
+                    "endColumn": 12,
+                    "endOffset": 840
+                },
+                "from": {
+                    "file": "/home/local/SPREADTRUM/michael.wang/MyAndroid/markting/lib_baidumap_location_for_jd/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 685,
+                        "endLine": 17,
+                        "endColumn": 12,
+                        "endOffset": 840
+                    }
+                }
+            }
+        ]
+    }
+]

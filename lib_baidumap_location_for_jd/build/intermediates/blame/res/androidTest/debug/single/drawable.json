@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/home/local/SPREADTRUM/michael.wang/MyAndroid/markting/lib_baidumap_location_for_jd/build/intermediates/res/merged/androidTest/debug/drawable/drawable_topbar_bg.xml",
+        "source": "/home/local/SPREADTRUM/michael.wang/MyAndroid/markting/lib_baidumap_location_for_jd/build/intermediates/bundles/debug/res/drawable/drawable_topbar_bg.xml"
+    },
+    {
+        "merged": "/home/local/SPREADTRUM/michael.wang/MyAndroid/markting/lib_baidumap_location_for_jd/build/intermediates/res/merged/androidTest/debug/drawable/btn_ok.xml",
+        "source": "/home/local/SPREADTRUM/michael.wang/MyAndroid/markting/lib_baidumap_location_for_jd/build/intermediates/bundles/debug/res/drawable/btn_ok.xml"
+    },
+    {
+        "merged": "/home/local/SPREADTRUM/michael.wang/MyAndroid/markting/lib_baidumap_location_for_jd/build/intermediates/res/merged/androidTest/debug/drawable/btn_cancel.xml",
+        "source": "/home/local/SPREADTRUM/michael.wang/MyAndroid/markting/lib_baidumap_location_for_jd/build/intermediates/bundles/debug/res/drawable/btn_cancel.xml"
+    },
+    {
+        "merged": "/home/local/SPREADTRUM/michael.wang/MyAndroid/markting/lib_baidumap_location_for_jd/build/intermediates/res/merged/androidTest/debug/drawable/dialog.xml",
+        "source": "/home/local/SPREADTRUM/michael.wang/MyAndroid/markting/lib_baidumap_location_for_jd/build/intermediates/bundles/debug/res/drawable/dialog.xml"
+    }
+]

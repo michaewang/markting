@@ -1,0 +1,268 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/android_layout_bg"
+    tools:context=".MoreActivity" >
+
+    <RelativeLayout
+        android:id="@+id/layout_login_topbar"
+        style="@style/TopbarStyle" >
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="6dp"
+            android:src="@drawable/flight_title_back_normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="更多"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/black"
+            android:textSize="@dimen/medium_text_size" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_login_topbar"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/layout_location"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/item_height"
+            android:background="@drawable/bg_item_center"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1.0"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="设置地理位置信息"
+                android:textColor="@color/text"
+                android:textSize="@dimen/small_text_size" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/item_margin_right"
+                android:src="@drawable/personel_arrow_right" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/item_height"
+            android:background="@drawable/bg_item_center"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1.0"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="亮度调节"
+                android:textColor="@color/text"
+                android:textSize="@dimen/small_text_size" />
+
+            <ToggleButton
+                android:id="@+id/tgbtn_lightness_ctrl"
+                style="@style/FilterToggleButton"
+                android:layout_marginRight="@dimen/item_margin_right" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_night_mode"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/item_height"
+            android:background="@drawable/bg_item_center"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/item_margin_left"
+                android:src="@drawable/night_mode_seekbar_min_icon" />
+
+            <SeekBar
+                android:id="@+id/seekBar_light"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="255"
+                android:progressDrawable="@drawable/seekbar_light"
+                android:thumb="@drawable/night_mode_seekbar_thumb" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/item_margin_right"
+                android:src="@drawable/night_mode_seekbar_max_icon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/item_height"
+            android:background="@drawable/bg_item_center"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1.0"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="2G/3G网络手动下载图片"
+                android:textColor="@color/text"
+                android:textSize="@dimen/small_text_size" />
+
+            <ToggleButton
+                android:id="@+id/tgbtn_load_img"
+                style="@style/FilterToggleButton"
+                android:layout_marginRight="@dimen/item_margin_right" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/item_height"
+            android:background="@drawable/bg_item_center"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1.0"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="WIFI环境下自动升级客户端"
+                android:textColor="@color/text"
+                android:textSize="@dimen/small_text_size" />
+
+            <ToggleButton
+                android:id="@+id/tgbtn_update"
+                style="@style/FilterToggleButton"
+                android:layout_marginRight="@dimen/item_margin_right" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_clear_cache"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/item_height"
+            android:background="@drawable/bg_item_center"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1.0"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="清除本地缓存"
+                android:textColor="@color/text"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tv_cache_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/item_margin_right"
+                android:text="41.43M"
+                android:textColor="@color/dimgray"
+                android:textSize="@dimen/small_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_recom_apps"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/item_height"
+            android:layout_marginTop="@dimen/item_margin_top"
+            android:background="@drawable/bg_item_top"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1.0"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="应用推荐"
+                android:textColor="@color/text"
+                android:textSize="@dimen/small_text_size" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/item_margin_right"
+                android:src="@drawable/personel_arrow_right" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_about"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/item_height"
+            android:background="@drawable/bg_item_bottom"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1.0"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="关于"
+                android:textColor="@color/text"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tv_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:text="V4.0.0"
+                android:textColor="@color/darkgray"
+                android:textSize="@dimen/small_text_size" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/item_margin_right"
+                android:src="@drawable/personel_arrow_right" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_margin="@dimen/item_margin_large"
+            android:background="@drawable/btn_ok"
+            android:text="退出"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

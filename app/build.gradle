@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 17
+    buildToolsVersion "21.0.0"
+
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+
+    defaultConfig {
+        applicationId "com.mars.markting"
+        minSdkVersion 12
+        targetSdkVersion 19
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile files('libs/lib_SwipMenuListView.jar')
+    compile files('libs/lib_volley.jar')
+    compile files('libs/android-support-v4.jar')
+    compile files('libs/BmobSDK_V3.3.3_0211.jar')
+    compile files('libs/jpush-sdk-release1.7.3.jar')
+    compile files('libs/lib_WeiBoSDK.jar')
+    compile files('libs/weibosdkcore.jar')
+    compile files('libs/lib_GridViewWithHeaderAndFooter.jar')
+    compile files('libs/com.umeng.fb.v5.1.0.jar')
+    compile files('libs/PhotoVIew.jar')
+    compile files('libs/lib_qrcode3.jar')
+    compile files('libs/support.jar')
+    compile project(':lib_PullToRefresh_JD_0213')
+    compile project(':lib_slidingmenu')
+    compile project(':lib_staggeredgrid')
+    compile project(':lib_yuchen0309_for_jd')
+    compile project(':lib_menudrawer')
+    compile project(':lib_QRCode3')
+    compile project(':lib_baidumap_location_for_jd')
+}

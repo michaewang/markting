@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:text="浏览足迹"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/small_text_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height_middle"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/item_margin_left"
+            android:layout_toLeftOf="@+id/textView1"
+            android:background="@drawable/hintColor" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height_middle"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/item_margin_right"
+            android:layout_toRightOf="@+id/textView1"
+            android:background="@drawable/hintColor" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:cacheColorHint="@drawable/transparent"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:listSelector="@drawable/transparent"
+        android:scrollbars="none" >
+    </ListView>
+
+</RelativeLayout>

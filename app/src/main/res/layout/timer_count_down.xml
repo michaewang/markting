@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/tv_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/timer_bg"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:textColor="@color/white"
+        android:text="03" />
+
+    <TextView
+        android:id="@+id/tv_timer_divider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_hour"
+        android:layout_alignBottom="@+id/tv_hour"
+        android:layout_toRightOf="@+id/tv_hour"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:text=":" />
+
+    <TextView
+        android:id="@+id/tv_minute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_timer_divider"
+        android:layout_alignBottom="@+id/tv_timer_divider"
+        android:layout_toRightOf="@+id/tv_timer_divider"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:background="@drawable/timer_bg"
+        android:textColor="@color/white"
+        android:text="35" />
+
+    <TextView
+        android:id="@+id/tv_timer_divider2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_minute"
+        android:layout_alignBottom="@+id/tv_minute"
+        android:layout_toRightOf="@+id/tv_minute"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:text=":" />
+
+    <TextView
+        android:id="@+id/tv_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_timer_divider2"
+        android:layout_alignBottom="@+id/tv_timer_divider2"
+        android:layout_toRightOf="@+id/tv_timer_divider2"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:background="@drawable/timer_bg"
+        android:textColor="@color/white"
+        android:text="35" />
+
+</RelativeLayout>

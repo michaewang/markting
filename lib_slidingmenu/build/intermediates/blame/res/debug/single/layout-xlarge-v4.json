@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/local/SPREADTRUM/michael.wang/MyAndroid/markting/lib_slidingmenu/build/intermediates/res/merged/debug/layout-xlarge-v4/abs__screen_action_bar.xml",
+        "source": "/home/local/SPREADTRUM/michael.wang/MyAndroid/markting/lib_slidingmenu/build/intermediates/exploded-aar/markting/actionbarsherlock/unspecified/res/layout-xlarge-v4/abs__screen_action_bar.xml"
+    },
+    {
+        "merged": "/home/local/SPREADTRUM/michael.wang/MyAndroid/markting/lib_slidingmenu/build/intermediates/res/merged/debug/layout-xlarge-v4/abs__screen_action_bar_overlay.xml",
+        "source": "/home/local/SPREADTRUM/michael.wang/MyAndroid/markting/lib_slidingmenu/build/intermediates/exploded-aar/markting/actionbarsherlock/unspecified/res/layout-xlarge-v4/abs__screen_action_bar_overlay.xml"
+    }
+]

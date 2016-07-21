@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/item_margin_bottom" >
+
+    <ImageView
+        android:id="@+id/img_icon"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/item_margin_top"
+        android:src="@drawable/load_logo" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/img_icon"
+        android:layout_alignRight="@+id/img_icon"
+        android:layout_below="@+id/img_icon"
+        android:layout_marginTop="@dimen/item_margin_top"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:text="JECCI FIVE 杰西伍"
+        android:textSize="@dimen/micro_text_size" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_title"
+        android:layout_alignRight="@+id/tv_title"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="@dimen/item_margin_top"
+        android:gravity="left"
+        android:text="￥99.00"
+        android:textColor="@color/black"
+        android:textSize="@dimen/small_medium_text_size"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>

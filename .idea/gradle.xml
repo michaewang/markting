@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/actionbarsherlock" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/lib_PullToRefresh_JD_0213" />
+            <option value="$PROJECT_DIR$/lib_QRCode3" />
+            <option value="$PROJECT_DIR$/lib_baidumap_location_for_jd" />
+            <option value="$PROJECT_DIR$/lib_menudrawer" />
+            <option value="$PROJECT_DIR$/lib_slidingmenu" />
+            <option value="$PROJECT_DIR$/lib_staggeredgrid" />
+            <option value="$PROJECT_DIR$/lib_yuchen0309_for_jd" />
+          </set>
+        </option>
+        <option name="myModules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/actionbarsherlock" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/lib_PullToRefresh_JD_0213" />
+            <option value="$PROJECT_DIR$/lib_QRCode3" />
+            <option value="$PROJECT_DIR$/lib_baidumap_location_for_jd" />
+            <option value="$PROJECT_DIR$/lib_menudrawer" />
+            <option value="$PROJECT_DIR$/lib_slidingmenu" />
+            <option value="$PROJECT_DIR$/lib_staggeredgrid" />
+            <option value="$PROJECT_DIR$/lib_yuchen0309_for_jd" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

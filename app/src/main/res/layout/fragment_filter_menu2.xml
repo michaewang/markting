@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/android_layout_bg" >
+
+    <RelativeLayout
+        android:id="@+id/layout_filter_menu2_topbar"
+        style="@style/TopbarStyle" >
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="6dp"
+            android:src="@drawable/flight_title_back_normal" />
+
+        <TextView
+            android:id="@+id/tv_filter_menu2_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="品牌"
+            android:textSize="@dimen/medium_text_size"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_sort_by"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_filter_menu2_topbar" >
+
+        <LinearLayout
+            android:id="@+id/layout_filter_menu2_title_sort_by"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/item_height_middle"
+            android:layout_marginTop="@dimen/item_margin_top"
+            android:background="@drawable/bg_item_top"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_recom_brand"
+                android:layout_width="0.0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="推荐品牌"
+                android:textColor="@color/red"
+                android:textSize="@dimen/small_medium_text_size" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/hintColor" />
+
+            <TextView
+                android:id="@+id/tv_sort_by_letter"
+                android:layout_width="0.0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="字母排序"
+                android:textColor="@color/black"
+                android:textSize="@dimen/small_medium_text_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/layout_filter_menu2_title_sort_by"
+            android:background="@drawable/tab_bg_shadow" />
+
+        <View
+            android:id="@+id/indicator"
+            android:layout_width="80dp"
+            android:layout_height="2dp"
+            android:layout_below="@+id/layout_filter_menu2_title_sort_by"
+            android:background="@drawable/red" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_sort_by"
+        android:background="@drawable/lightBg" >
+
+        <ListView
+            android:id="@+id/listView_filter_menu2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/mySideBar1"
+            android:cacheColorHint="@drawable/transparent"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:listSelector="@drawable/transparent" >
+        </ListView>
+
+        <com.mars.markting.utils.MySideBar
+            android:id="@+id/mySideBar1"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

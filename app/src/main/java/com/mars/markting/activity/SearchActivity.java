@@ -1,0 +1,413 @@
+package com.mars.markting.activity;
+
+import com.lib.uil.UILUtils;
+import com.mars.markting.R;
+import com.mars.markting.bean.Bean;
+import com.mars.markting.bean.GoodsInfo;
+import com.mars.markting.utils.Constants;
+import com.mars.markting.utils.NumberUtils;
+import com.mars.markting.utils.SearchAdapter;
+import com.mars.markting.utils.SearchView;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.app.Activity;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class SearchActivity extends Activity implements SearchView.SearchViewListener {
+
+
+	private ImageView mImgNuResult;
+	/**
+	 * 搜索结果列表view
+	 */
+	private ListView lvResults;
+
+	/**
+	 * 搜索view
+	 */
+	private SearchView searchView;
+
+
+	/**
+	 * 热搜框列表adapter
+	 */
+	private ArrayAdapter<String> hintAdapter;
+
+	/**
+	 * 自动补全列表adapter
+	 */
+	private ArrayAdapter<String> autoCompleteAdapter;
+
+	/**
+	 * 搜索结果列表adapter
+	 */
+	//private SearchAdapter resultAdapter;
+	private GoodsListAdapter resultAdapter; //michael for search function
+
+	/**
+	 * 数据库数据，总数据
+	 */
+	//michael for search function
+	private ArrayList<GoodsInfo> dbData = new ArrayList<GoodsInfo>();
+	//private List<Bean> dbData;
+
+	/**
+	 * 热搜版数据
+	 */
+	private List<String> hintData;
+
+	/**
+	 * 搜索过程中自动补全数据
+	 */
+	private List<String> autoCompleteData;
+
+	/**
+	 * 搜索结果的数据
+	 */
+	//michael
+	private List<GoodsInfo> resultData;
+	//private List<Bean> resultData;
+
+	/**
+	 * 默认提示框显示项的个数
+	 */
+	private static int DEFAULT_HINT_SIZE = 4;
+
+	/**
+	 * 提示框显示项的个数
+	 */
+	private static int hintSize = DEFAULT_HINT_SIZE;
+
+	/**
+	 * 设置提示框显示项的个数
+	 *
+	 * @param hintSize 提示框显示个数
+	 */
+	public static void setHintSize(int hintSize) {
+		SearchActivity.hintSize = hintSize;
+	}
+
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		setContentView(R.layout.activity_search);
+		//michael for active search function
+		dbData = MainActivity.getAllGoodInfo();
+
+		initData();
+		initViews();
+	}
+
+	/**
+	 * 初始化视图
+	 */
+	private void initViews() {
+		mImgNuResult = (ImageView) findViewById(R.id.img_null_result);
+		lvResults = (ListView) findViewById(R.id.main_lv_search_results);
+		searchView = (SearchView) findViewById(R.id.main_search_layout);
+		//设置监听
+		searchView.setSearchViewListener(this);
+		//设置adapter
+		searchView.setTipsHintAdapter(hintAdapter);
+		searchView.setAutoCompleteAdapter(autoCompleteAdapter);
+
+		lvResults.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+				//michael
+				Log.d("michael","position = " + position);
+				GoodsInfo info = resultData.get(position);
+				Intent intent = new Intent(SearchActivity.this, DetailActivity.class);
+				intent.putExtra(Constants.INTENT_KEY.INFO_TO_DETAIL, info);
+				startActivity(intent);
+				//Toast.makeText(SearchActivity.this, position + "", Toast.LENGTH_SHORT).show();
+			}
+		});
+	}
+
+	/**
+	 * 初始化数据
+	 */
+	private void initData() {
+		//从数据库获取数据
+		getDbData();
+		//初始化热搜版数据
+		getHintData();
+		//初始化自动补全数据
+		getAutoCompleteData(null);
+		//初始化搜索结果数据
+		getResultData(null);
+	}
+
+	/**
+	 * 获取db 数据
+	 */
+	private void getDbData() {
+		//dbData.addAll(mAllGoodsList);
+		/*
+		int size = 100;
+		dbData = new ArrayList<Bean>(size);
+		for (int i = 0; i < size; i++) {
+			dbData.add(new Bean(R.drawable.icon, "android开发必备技能" + (i + 1), "Android自定义view——自定义搜索view", i * 20 + 2 + ""));
+		}
+		*/
+	}
+
+	/**
+	 * 获取热搜版data 和adapter
+	 */
+	private void getHintData() {
+		hintData = new ArrayList<String>();//hintSize
+		/*for (int i = 1; i <= hintSize; i++) {
+			hintData.add("热搜版" + i + "：Android自定义View");
+		}*/
+		hintData.add("Levi's");
+		hintData.add("Book");
+		hintData.add("Apple");
+		hintData.add("ThinkPad");
+		hintData.add("Logitech");
+		hintData.add("Swissgear");
+		hintData.add("Transcend");
+		hintData.add("Canon");
+		hintData.add("WHEEL");
+		hintData.add("Bicycle");
+		hintData.add("T-shirt");
+		hintAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, hintData);
+	}
+
+	/**
+	 * 获取自动补全data 和adapter
+	 */
+	private void getAutoCompleteData(String text) {
+		if (autoCompleteData == null) {
+			//初始化
+			autoCompleteData = new ArrayList<String>();//hintSize
+		} else {
+			// 根据text 获取auto data
+			autoCompleteData.clear();
+
+			//michael
+			for (int i = 0; i < dbData.size(); i++) {
+				if (dbData.get(i).getGoodsName().toLowerCase().contains(text.trim().toLowerCase())) {
+					autoCompleteData.add(dbData.get(i).getGoodsName());
+				}
+			}
+			/*
+			for (int i = 0, count = 0; i < dbData.size()
+					&& count < hintSize; i++) {
+				if (dbData.get(i).getGoodsName().contains(text.trim())) {
+					autoCompleteData.add(dbData.get(i).getGoodsName());
+					count++;
+				}
+			}*/
+		}
+		if (autoCompleteAdapter == null) {
+			autoCompleteAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, autoCompleteData);
+		} else {
+			autoCompleteAdapter.notifyDataSetChanged();
+		}
+	}
+
+	/**
+	 * 获取搜索结果data和adapter
+	 */
+	private void getResultData(String text) {
+		if (resultData == null) {
+			// 初始化
+			//michael
+			resultData = new ArrayList<GoodsInfo>();
+			//resultData = new ArrayList<Bean>();
+		} else {
+			resultData.clear();
+			for (int i = 0; i < dbData.size(); i++) {
+				if (dbData.get(i).getGoodsName().contains(text.trim())) {
+					resultData.add(dbData.get(i));
+				}
+			}
+		}
+		//michael
+		/*if (resultAdapter == null) {
+			resultAdapter = new SearchAdapter(this, resultData, R.layout.item_bean_list);
+		} else {
+			resultAdapter.notifyDataSetChanged();
+		}*/
+
+		//michael
+		if (resultAdapter == null) {
+			resultAdapter = new GoodsListAdapter();
+		} else {
+			resultAdapter.notifyDataSetChanged();
+		}
+
+	}
+
+	/**
+	 * 当搜索框 文本改变时 触发的回调 ,更新自动补全数据
+	 * @param text
+	 */
+	@Override
+	public void onRefreshAutoComplete(String text) {
+		//更新数据
+		getAutoCompleteData(text);
+	}
+
+	/**
+	 * 点击搜索键时edit text触发的回调
+	 *
+	 * @param text
+	 */
+	@Override
+	public void onSearch(String text) {
+		//更新result数据
+		getResultData(text);
+
+		//michael
+		if(resultData != null  &&  resultData.size() == 0){
+			mImgNuResult.setVisibility(View.VISIBLE);
+		}else{
+			mImgNuResult.setVisibility(View.GONE);
+		}
+
+
+		lvResults.setVisibility(View.VISIBLE);
+		//第一次获取结果 还未配置适配器
+		if (lvResults.getAdapter() == null) {
+			//获取搜索数据 设置适配器
+			lvResults.setAdapter(resultAdapter);
+		} else {
+			//更新搜索数据
+			resultAdapter.notifyDataSetChanged();
+		}
+		Toast.makeText(this, "完成搜素", Toast.LENGTH_SHORT).show();
+	}
+
+	@Override
+	public void onDisplayWhenTextChange() {
+		lvResults.setVisibility(View.GONE);
+		mImgNuResult.setVisibility(View.GONE);
+	}
+
+
+	//michael for searche function
+
+	//private ArrayList<GoodsInfo> mAllGoodsList = new ArrayList<GoodsInfo>();
+
+	class ViewHolder {
+		ImageView imgIcon;
+		ImageView imgVip;
+		TextView tvTitle;
+		TextView tvPrice;
+		TextView tvPercent;
+		TextView tvNum;
+	}
+
+	class GoodsListAdapter extends BaseAdapter {
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			View inflate = null;
+			ViewHolder holder = null;
+			if (convertView == null) {
+				inflate = getLayoutInflater().inflate(R.layout.item_goods_list_list, null);
+				holder = new ViewHolder();
+				holder.imgIcon = (ImageView) inflate.findViewById(R.id.img_icon);
+				holder.imgVip = (ImageView) inflate.findViewById(R.id.img_icon_vip);
+				holder.tvTitle = (TextView) inflate.findViewById(R.id.tv_title);
+				holder.tvPrice = (TextView) inflate.findViewById(R.id.tv_price);
+				holder.tvPercent = (TextView) inflate.findViewById(R.id.tv_percent);
+				holder.tvNum = (TextView) inflate.findViewById(R.id.tv_num);
+				inflate.setTag(holder);
+			} else {
+				inflate = convertView;
+				holder = (ViewHolder) inflate.getTag();
+			}
+			GoodsInfo goodsInfo = resultData.get(position);
+			holder.tvTitle.setText(goodsInfo.getGoodsName());
+			holder.tvPrice.setText(NumberUtils.formatPrice(goodsInfo.getGoodsPrice()));
+			holder.tvPercent.setText(goodsInfo.getGoodsPercent());
+			holder.tvNum.setText(goodsInfo.getGoodsComment() + "人");//michael
+			UILUtils.displayImage(SearchActivity.this, goodsInfo.getGoodsIcon(), holder.imgIcon);
+			if (goodsInfo.getIsPhone() == 1) {
+				holder.imgVip.setVisibility(View.VISIBLE);
+			} else {
+				holder.imgVip.setVisibility(View.INVISIBLE);
+			}
+			return inflate;
+		}
+
+		@Override
+		public int getCount() {
+			return resultData.size();
+		}
+
+		@Override
+		public Object getItem(int position) {
+			return null;
+		}
+
+		@Override
+		public long getItemId(int position) {
+			return 0;
+		}
+
+	}
+
+}
+
+
+
+
+/*
+
+public class SearchActivity extends Activity implements OnClickListener {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		setContentView(R.layout.activity_search);
+		findViewById(R.id.img_back).setOnClickListener(this);
+	}
+
+
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if (keyCode == KeyEvent.KEYCODE_BACK) {
+			finish();
+			overridePendingTransition(0, 0);
+		}
+		return super.onKeyDown(keyCode, event);
+	}
+
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.img_back:
+			finish();
+			overridePendingTransition(0, 0);
+			break;
+
+		default:
+			break;
+		}
+	}
+}
+*/
